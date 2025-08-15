@@ -12,9 +12,12 @@ export default function AddTaskModal({ onClose, onAdd }) {
   };
 
   return (
-    <div className="bg-opacity-50 fixed inset-0 flex items-center justify-center bg-black">
-      <div className="w-96 rounded bg-white p-6 shadow">
-        <h2 className="mb-4 text-xl font-bold">Add New Task</h2>
+    <div className="fixed inset-0 flex items-center justify-center bg-white/20 backdrop-blur-sm">
+      <div className="absolute inset-0 z-0 bg-gradient-to-br from-indigo-200 via-blue-200 to-sky-200 opacity-80"></div>
+      <div className="z-50 w-96 rounded-lg bg-white p-6 shadow-xl/30">
+        <h2 className="mb-4 text-center font-serif text-xl font-bold text-slate-800">
+          Add New Task
+        </h2>
         <form onSubmit={handleSubmit} className="space-y-3">
           <input
             type="text"
@@ -33,13 +36,13 @@ export default function AddTaskModal({ onClose, onAdd }) {
             <button
               type="button"
               onClick={onClose}
-              className="rounded bg-gray-300 px-3 py-1"
+              className="rounded bg-slate-700 px-3 py-1 text-slate-50 transition-all duration-300 hover:cursor-pointer hover:bg-neutral-800 hover:shadow-lg/30"
             >
               Cancel
             </button>
             <button
               type="submit"
-              className="rounded bg-blue-600 px-3 py-1 text-white"
+              className="rounded bg-blue-800 px-3 py-1 text-slate-100 transition-all duration-300 hover:cursor-pointer hover:bg-blue-600 hover:shadow-lg/30"
             >
               Add
             </button>
